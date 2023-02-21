@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    margin:0px;
+}
+* {
+    font-family:  "Nunito Sans", sans-serif;
+}
+#nav {
+    display: grid;
+    grid-template-columns: 30% 70%;
+   
+   padding: 0% 15% 0% 5%;
+   align-items: center;
+}
+#nav > div > h1 {
+    font-size: 30px;
+    color:rgb(15, 113, 115)
+}
+#nav > div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#nav > div:nth-child(2) {
+    margin-top: 10px;
+}
+#nav > div:nth-child(2) > a {
+    font-size: 16px;
+    color:rgb(26, 35, 59);
+    font-weight: 300px;
+    font-style: normal;
+    line-height: 26px;
+}
+#nav > div:nth-child(2) >:nth-child(6) {
+color:rgb(15, 113, 115);
+ background-color: white;
+ border:none;
+}
+#nav > div:nth-child(2) >:nth-child(7) {
+background-color: rgb(15, 113, 115);
+color:white;
+border: none;
+padding:10px 20px;
+line-height: 24px;
+font-size: 16px;
+}
+
+
+.Dark-page  {
+    height: 800px;
+    width: 100%;
+}
+.darkColor {
+background-color: black;
+width:100%;
+height: 800px;
+border-radius:  0%  0% 40%  40%/ 20% 15%  ;
+color:white;
+}
+.darkColor > p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 24px;
+    padding:25px
+} 
+.darkTextPart {
+    width:60%;
+    margin: auto;
+}
+.darkTextPart > h1 {
+    font-size: 80px;
+    font-weight:700px;
+    line-height: 104px;
+    text-align: center;
+}
+.darkTextPart > p {
+    font-size: 20px;
+    font-weight:300px;
+    line-height: 32px;
+    text-align: center;
+   
+}
+#DarkButtonsPart {
+  margin:40px 0px;
+}
+#DarkButtonsPart > button:nth-child(1) {
+    width:49%;
+    font-size: 16px;
+    font-weight:600px;
+    line-height: 24px;
+    text-align: center;
+    background-color:#1C2540;
+    color:white;
+    padding:15px;
+}
+#DarkButtonsPart > button:nth-child(2) {
+    width:49%;
+    font-size: 16px;
+    font-weight:600px;
+    line-height: 24px;
+    text-align: center;
+    background-color:white;
+    color:#010305;
+    padding:15px;
+}
+#textpart {
+  width:85%;
+  margin:40px auto;
+}
+#textpart  > p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 600px;
+  color:rgb(28, 37, 64);
+}
+#apis {
+    width:85%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   gap:20px 40px;
+}
+.child > div {
+  width: 100%;
+}
+
+.child > div:nth-child(2) {
+    width:100%;
+    margin:-20px auto 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    padding:4%;
+    box-sizing: border-box;
+   
+}
+#apis > div > div > img {
+    width:100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.child > div:nth-child(2) > button {
+ font-size: 15px;
+ background-color: white;
+ border: 1px solid black;
+ padding: 15px;
+}
+#oyyi {
+    background-color: #0F7173;
+    width:100%;
+  
+    padding:80px 3%;
+    box-sizing: border-box;
+}
+#oyyi  > div {
+    text-align: center;
+    color: white;
+}
+#apisinfo {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+}
+#apisinfo > div {
+    display: grid;
+    grid-template-columns: 8% 90%;
+    gap:10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding:20px;
+    box-sizing: border-box;
+    color:black;
+    text-align: left;
+}
+#apisinfo > div > div > img {
+    width:100%;
+    margin-top: 10px;
+}
+#apisinfo > div > div > h1 {
+    text-align: left;
+}
+#companyDitels {
+    width: 60%;
+    margin: 70px auto;
+    text-align: center;
+}
+#companyImages {
+
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   margin:50px 0px;
+}
+#companyImages > div:nth-child(3) > img {
+    margin-right: 5px ;
+  width: 150px;
+  height: 100px;
+
+}
+#companyImages > div > img {
+    width: 70%;
+}
+#PriceDitels {
+    width:85%;
+    margin: 25px auto;
+    text-align: center;
+}
+#PriceDitels > div:nth-child(1) {
+    margin: 200px 0px 40px 0px ;
+    
+}
+#PriceCarts {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px
+}
+#PriceCarts > div {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    padding:25px;
+    border-radius: 15px;
+}
+#PriceCarts > div > p {
+    line-height: 25px ;
+}
+#PriceCarts > div > button {
+background-color: #0F7173;
+color:white;
+border:  none;
+font-size: 16px;
+line-height: 24px;
+padding:10px 100px;
+border-radius: 15px;
+}
+.price {
+    font-size: 80px;
+   
+}
+.status {
+    font-size: 28px;
+    line-height: 36px;
+    color:#4D7173;
+}
+#foter {
+    background-color: #1C2540;
+    width:100%;
+    color:rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding:20px;
+    box-sizing: border-box;
+  
+}
+#fotervalue {
+    display: grid;
+    grid-template-columns: 70% 30%
+    
+}
+#fotervalue div:nth-child(1) {
+    text-align: left;
+    margin-left: 40px;
+    color:rgb(15, 113, 115);
+}
+#fotervalue div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#qoutes {
+    text-align: center;
+}
+
+
+ /* medium screen */
+@media screen and (min-width:700px) and (max-width:1000px) {
+    .darkTextPart > h1 {
+    font-size: 60px; 
+    line-height: 80px;
+    flex-wrap: wrap;
+}
+.darkTextPart > p {
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+#apisinfo {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:20px;
+}
+#companyImages {
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+#PriceCarts {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:40px
+}
+#fotervalue {
+    display: grid;
+    grid-template-columns: 90%
+    
+}
+
+}
+ /* small screen  */
+ @media screen and (min-width:100px) and (max-width:699px) {
+    .darkTextPart > h1 {
+    font-size: 50px; 
+    line-height: 50px;
+    flex-wrap: wrap;
+}
+.darkTextPart > p {
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+#apis {
+    width:85%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   gap:20px 40px;
+}
+#apisinfo {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:20px;
+}
+#companyImages {
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+}
+#PriceCarts {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:40px
+}
+#fotervalue {
+    display: grid;
+    grid-template-columns: 90%
+    
+}
+ }
+</style>
+<body>
+   
+      <div id="nav">
+        <div>
+            <h1>Oyyi</h1>
+        </div>
+        <div>
+              <a>Our APIs</a>
+              <a>Features</a>
+              <a>Documentation</a>
+              <a>Pricing</a>
+              <a>Dashboard</a>
+              <button>Login</button>
+             <button>Sign Up</button>
+              
+           
+        </div>
+      </div>
+
+      <!-- dark page  -->
+
+       <div class="Dark-page">
+             <div class="darkColor">
+                 <p>Starting from 1st December. Token will be required for Api. ITs Free.</p>
+                 <div class="darkTextPart">
+                    <h1>Cloud Processing Made Out Of Perfection!</h1>
+                    <p>Our multiple APIs are made to meet your need as developer and implement without getting worried about coding it.</p>
+                    <div id="DarkButtonsPart">
+                        <button>Get Started</button>
+                        <button>Explore</button>
+                    </div>
+                 </div>
+             </div>
+       </div>
+      
+       
+     <div id="textpart" >
+        <p>We are determinedprovide development needs</p>
+        <p>We have free apis for almost every development needs.</p>
+        </div>
+
+        <!-- apis detenmin -->
+        
+        <div id="apis">
+            <div class="child"> 
+                <div>
+                    <img src="images/img1.jpg" alt="">
+                </div>
+              
+                <div>
+                    <h3>Media APIs</h3>
+                    <p>Media Apis for Image,Video,Pdf Manipulation or other related tasks.</p>
+                     <button>Read More</button>
+                </div>
+                
+            </div>
+
+            <div class="child">
+                <div> <img src="images/img2.jpg" alt=""> </div>
+                
+                <div>
+                    <h3>Machine Learning APIs</h3>
+                    <p>ML Api for facial recognition , text classification , sentiment analysis and many more.</p>
+                     <button>Read More</button>
+                </div>
+               
+            </div>
+
+            <div class="child" >
+                <div>       <img src="images/img3.jpg" alt=""> </div>
+          
+                <div>
+                    <h3>General APIs</h3>
+                    <p>General api for simple task that dont need any heavy dusty computation and are free to use.</p>
+                     <button>Read More</button>
+                </div>
+                
+            </div>
+
+            <div class="child" >
+               <div> <img src="images/img4.jpg" alt=""> </div>
+                <div>
+                    <h3>Upcoming APIs</h3>
+                    <p>Apart from above mentioned apis there are lots useful apis are on the way</p>
+                     <button>Read More</button>
+                </div>
+             
+            </div>
+        </div>
+
+        <!-- why oyyi -->
+        <div id="oyyi">
+            <div>
+                <h1>Why Oyyi ?</h1>
+                <p>We have apis to meet all your development needs.</p>
+            </div>
+            <div id="apisinfo">
+                <div>
+                    <div>
+                        <img src="images/img5.png" alt="">
+                      </div>
+                      <div>
+                          <h3>Simple to Use</h3>
+                          <p>Our API are simple to use with any programming language with network Library.</p>
+                      </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <img src="images/img6.png" alt="">
+                      </div>
+                      <div>
+                          <h3>Simple to Use</h3>
+                          <p>Our API are simple to use with any programming language with network Library.</p>
+                      </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <img src="images/img7.png" alt="">
+                      </div>
+                      <div>
+                          <h3>Simple to Use</h3>
+                          <p>Our API are simple to use with any programming language with network Library.</p>
+                      </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <img src="images/img8.png" alt="">
+                      </div>
+                      <div>
+                          <h3>Simple to Use</h3>
+                          <p>Our API are simple to use with any programming language with network Library.</p>
+                      </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <img src="images/img9.png" alt="">
+                      </div>
+                      <div>
+                          <h3>Simple to Use</h3>
+                          <p>Our API are simple to use with any programming language with network Library.</p>
+                      </div>
+                </div>
+
+
+
+                <div>
+                    <div>
+                        <img src="images/img10.png" alt="">
+                      </div>
+                      <div>
+                          <h3>Simple to Use</h3>
+                          <p>Our API are simple to use with any programming language with network Library.</p>
+                      </div>
+                </div>
+                  
+            </div>
+        </div>
+
+        <!-- company data -->
+        <div id="companyDitels">
+            <div>
+                <p>Trusted by startup and other companies</p>
+            </div>
+            <div id="companyImages">
+                <div> <img src="images/img11.png" alt=""> </div>
+                <div>
+                    <img src="images/img12.png" alt="">
+                </div>
+                <div>
+                    <img src="images/img13.png" alt="">
+                </div>
+                 <div>
+                    <img src="images/img14.png" alt="">
+                 </div>
+                 <div>
+                    <img src="images/img15.png" alt="">
+                 </div>
+                
+            </div>
+        </div>
+
+        <!-- price ditels -->
+    <div id="PriceDitels">
+            <div>
+                <h2>Simple pricing for you</h2>
+                <p>We are dedicated to providing you with the best experience possible.</p>
+            </div>
+            <div id="PriceCarts">
+                <div>
+                   
+                    <span class="status">Free</span>
+                    <p>$</p>
+                    <span class="price"> 0</span>
+                    <p>/ month</p>
+                    <hr>
+                    <p>Api limits of 10 requests/minute</p>
+                    <p>Storage space: 500MB</p>
+                    <p>1 Free Static Website Hosting</p>
+                    <p>1 Queue job worker</p>
+                    <p>Custom Domain for file serving</p>
+                    <button>Start Free</button>
+                </div>
+
+                <div>
+                    <span class="status">Startup</span>
+                    <p>$</p>
+                    <span class="price"> 20</span>
+                    <p>/ month</p>
+                    <hr>
+                    <p>Api limits of 40 requests/minute</p>
+                    <p>Storage space: 5 GB</p>
+                    <p>3 Free Static Website Hosting</p>
+                    <p>4 Queue job worker</p>
+                    <p>Custom Domain for file serving</p>
+                    <button>Activate it</button>
+                </div>
+
+                <div>
+                    
+                    <span class="status">Custom</span>
+                    <hr>
+                    <p>Write to us about your requirement and our team will get back to you.</p>
+                    <button>Contact Us</button>
+                </div>
+            </div>
+    </div>
+
+    <!-- foter functionality -->
+    <div id="foter">
+        <div id="fotervalue">
+            <div>
+                 <h1>Oyyi</h1>
+                </div>
+            <div>
+                <p>About</p>
+                <p>Terms</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <hr>
+        <p>© Oyyi Cloud 2023.All rights reserved.</p>
+    </div>
+     <p id="qoutes">Made with ♥ by Meefic in India.</p>
+</body>
+</html>
+<script>
+
+</script>
